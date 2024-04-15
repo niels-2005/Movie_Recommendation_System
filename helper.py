@@ -68,7 +68,7 @@ def get_recommendations(title: str, n_recomm: int = 10, only_title: bool = True)
 
     # Return the top 10 most similar movies
     if only_title:
-        return df["original_title"].iloc[movie_indices]
+        return df["original_title"].iloc[movie_indices].tolist()
     else:
         return df["summary"].iloc[movie_indices].tolist()
 
