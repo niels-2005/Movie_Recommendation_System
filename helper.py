@@ -5,6 +5,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import json
 
+
+# TODO: Add Docstrings!
+
+
 def extract_genre_names(genre_string):
     genre_list = json.loads(genre_string)
     return ', '.join([genre['name'] for genre in genre_list])
